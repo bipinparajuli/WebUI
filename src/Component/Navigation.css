@@ -1,0 +1,27 @@
+#responsive-navbar-nav{
+    position: absolute;
+    right: 10px;
+
+}
+.navlink{
+text-decoration: none;
+color: black;
+margin: 0 10px;
+font-family: Montserrat, sans-serif;
+font-size: 12px;
+font-weight: 600;
+position: relative;
+top: 10px;
+transition: all 0.2s ease-in !important;
+
+}
+
+.navlink:hover{
+color: #5458ae;
+}
+
+.btn-primary{
+    background-color: #5458ae !important;
+    border-radius: 50px !important;
+    padding: 5px 20px !important;
+}
