@@ -18,5 +18,34 @@ text:"bipin parajuli"
                 src:trak3,
                 title:"New Story Test",
                 text:"bipin parajuli"
-                    }
+                    },
+                    {
+                        src:trak1,
+                        title:"New Story Test",
+                        text:"bipin parajuli"
+                            },
+                            {
+                                src:trak2,
+                                title:"New Story Test",
+                                text:"bipin parajuli"
+                                    },
+                                    {
+                                        src:trak3,
+                                        title:"New Story Test",
+                                        text:"bipin parajuli"
+                                            },{
+                                                src:trak1,
+                                                title:"New Story Test",
+                                                text:"bipin parajuli"
+                                                    },
+                                                    {
+                                                        src:trak2,
+                                                        title:"New Story Test",
+                                                        text:"bipin parajuli"
+                                                            },
+                                                            {
+                                                                src:trak3,
+                                                                title:"New Story Test",
+                                                                text:"bipin parajuli"
+                                                                    }
 ]

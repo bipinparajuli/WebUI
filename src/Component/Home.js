@@ -6,12 +6,45 @@ import btnimg from '../assets/hero-story-people.png'
 import Card from './Cards'
 import {data} from '../Data.js/discover'
 import {hot} from '../Data.js/hot'
+import {rust} from '../Data.js/rust'
+import './Home.css'
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const Home = () => {
-    console.log(data);
+
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 1,
+        slidesToShow: 2,
+        slidesToScroll: 1
+      };
+      const responsive = {
+        superLargeDesktop: {
+          // the naming can be any, depends on you.
+          breakpoint: { max: 4000, min: 3000 },
+          items: 5
+        },
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 3
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 2
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1
+        }
+      };
+
     return (
         <Layout>
-<Container>
+<Container fluid>
+    <Container>
+
     <Row>
         <Col>
         <Image src={img} />
@@ -55,7 +88,9 @@ const Home = () => {
 
 {/* hot stories */}
 <h1 style={{fontSize:"28px",marginBottom:"15px",fontWeight:"700",color:"#20114d",lineHeight:"110%"}}>Hot Stories</h1>
-<Row>
+
+<Carousel responsive={responsive}>
+{/* <Row> */}
 
 {
 hot.map(data=> (
@@ -66,7 +101,64 @@ hot.map(data=> (
 ))
 }
 
+{/* </Row> */}
+</Carousel>
+
+{/* RUSH */}
+
+<h1 style={{fontSize:"28px",marginBottom:"15px",fontWeight:"700",color:"#20114d",lineHeight:"110%"}}>Adrenaline Rush</h1>
+<Row>
+
+
+
+
+{
+    rust.map(src=>(
+<Col>
+        <Card img={src.src} />
+</Col>
+    ))
+}
 </Row>
+</Container>
+
+{/* last banner */}
+<Container style={{backgroundColor:"#5458ae"}} fluid>
+<Container >
+<Row style={{flexDirection:"column",justifyContent:"center",alignItems:"center",color:"white"}}>
+    <Col>
+    <h1 style={{textAlign:"center",fontSize:"30px",fontWeight:"700",marginTop:"10%"}}>So far and counting ...</h1>
+    </Col>
+    <Col>
+    <Row className="num">
+        <Col>    
+        <h3>125</h3>
+        <p>Degisnation</p>
+        </Col>
+        <Col><h3>125</h3>
+        <p>Degisnation</p>
+        </Col>
+        <Col><h3>125</h3>
+        <p>Degisnation</p>
+        </Col>
+        <Col><h3>125</h3>
+        <p>Degisnation</p>
+        </Col>
+        <Col><h3>125</h3>
+        <p>Degisnation</p>
+        </Col>
+    </Row>
+    </Col>
+    <Col style={{marginBottom:"10%",textAlign:"center"}}>
+    <Button className="btn_last">Join Us</Button>
+    <Button className="btn_second">Send Feedback</Button>
+    
+    </Col>
+    <hr />
+</Row>
+
+</Container>
+</Container>
 
 </Container>
         </Layout>
