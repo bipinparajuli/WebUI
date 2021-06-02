@@ -7,19 +7,16 @@ import Card from './Cards'
 import {data} from '../Data.js/discover'
 import {hot} from '../Data.js/hot'
 import {rust} from '../Data.js/rust'
+import {traveller} from '../Data.js/traveller'
+
 import './Home.css'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Profile from './Profile'
 
 const Home = () => {
 
-    var settings = {
-        dots: true,
-        infinite: true,
-        speed: 1,
-        slidesToShow: 2,
-        slidesToScroll: 1
-      };
+   
       const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -120,7 +117,26 @@ hot.map(data=> (
     ))
 }
 </Row>
+
+{/* Traveller profile */}
+
+<h1 style={{fontSize:"28px",marginBottom:"15px",fontWeight:"700",color:"#20114d",lineHeight:"110%"}}>Travel Experts</h1>
+<Row>
+
+
+
+
+{
+    traveller.map(src=>(
+<Col>
+        <Profile src={src.src} name={src.name} profile={src.profile} />
+</Col>
+    ))
+}
+</Row>
+
 </Container>
+
 
 {/* last banner */}
 <Container style={{backgroundColor:"#5458ae"}} fluid>
